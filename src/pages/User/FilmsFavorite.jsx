@@ -35,7 +35,7 @@ const FilmsFavorite = () => {
   const getListFilms = () =>
     Films.map((option, index) => (
       <div
-        className='relative p-1 max-h-1/2 w-1/5 max-lg:w-1/4 max-md:w-1/3 flex flex-col'
+        className='relative p-1 max-h-1/2 w-1/5 max-lg:w-1/4 max-md:w-1/2 flex flex-col'
         key={index}
         onMouseEnter={() => handleMouseEnter(index)}
         onMouseLeave={handleMouseLeave}
@@ -80,7 +80,7 @@ const FilmsFavorite = () => {
   }
   return (
     <div className='w-full bg-gray-600 p-6 min-h-[50vh] rounded-sm shadow '>
-      <label className='text-white text-2xl   bg-gradient-to-r max-lg:w-full from-green-600 outline-none whitespace-nowrap via-green-700 to-green-500 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 shadow-lg shadow-green-500/50 dark:shadow-lg dark:shadow-green-800/80 font-medium rounded-lg   px-5 py-1.5 text-left me-2 mb-2  '>
+      <label className='text-white max-lg:text-base lg:text-2xl    bg-gradient-to-r max-lg:w-full from-green-600 outline-none whitespace-nowrap via-green-700 to-green-500 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 shadow-lg shadow-green-500/50 dark:shadow-lg dark:shadow-green-800/80 font-medium rounded-lg   px-5 py-1.5 text-left me-2 mb-2  '>
         Phim Yêu thích của {username}
       </label>
       {Films.length > 0 ? (

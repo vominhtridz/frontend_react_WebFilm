@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "react-router-dom"
 const TabNavigate = ({ listFilms }) => {
   return (
-    <div className='flex   text-sm uppercase  w-full items-center text-white bg-black p-2 rounded-sm'>
+    <div className='flex  max-lg:overflow-x-auto  text-sm uppercase  w-full items-center text-white bg-black p-2 rounded-sm'>
       <Link to={`/`}>Trang chủ</Link>
       <p className='px-1'>/</p>
       {listFilms.movie.category.map((item, index) => (

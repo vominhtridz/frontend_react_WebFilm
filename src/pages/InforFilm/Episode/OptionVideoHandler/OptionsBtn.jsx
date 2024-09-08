@@ -1,13 +1,7 @@
 import { Link } from "react-router-dom"
-import {
-  EnLargeIcon,
-  ErrorIcon,
-  HistoryIcon,
-  InstallIcon,
-  HeartIcon,
-} from "../../../../images/icons"
+import { EnLargeIcon, ErrorIcon, InstallIcon } from "../../../../images/icons"
 
-const OptionsBtn = ({ handleError, handleInstall, handleEnLarge, handleLove, favorites }) => {
+const OptionsBtn = ({ handleError, handleInstall, handleEnLarge }) => {
   const buttons = [
     {
       icon: EnLargeIcon,
@@ -29,31 +23,13 @@ const OptionsBtn = ({ handleError, handleInstall, handleEnLarge, handleLove, fav
     <button
       onClick={option.func}
       key={index}
-      className='flex outline-none  items-center text-sm font-medium px-3 text-white hover:text-yellow-400'
+      className='flex outline-none  items-center max-lg:text-[12px] text-sm font-medium max-lg:px-1 px-3 text-white hover:text-yellow-400'
     >
       <p className='px-2 text-slate-300 text-lg'>{option.icon}</p>
       {option.text}
     </button>
   ))
-  return (
-    <div className='flex items-center '>
-      {getButton}
-      <button
-        onClick={handleLove}
-        className={`flex items-center text-sm font-medium px-3 ${favorites ? "text-green-400" : "text-white "}  hover:text-yellow-400`}
-      >
-        <p className={`px-2  text-lg`}>{HeartIcon}</p>
-        {favorites ? "Đang Yêu thích" : "Yêu thích"}
-      </button>
-      <Link
-        to='/user/history'
-        className='flex items-center text-sm font-medium px-3 text-white hover:text-yellow-400'
-      >
-        <p className='px-2 text-slate-300 text-lg'>{HistoryIcon}</p>
-        Lịch Sử Xem
-      </Link>
-    </div>
-  )
+  return <div className='flex '>{getButton}</div>
 }
 
 export default OptionsBtn

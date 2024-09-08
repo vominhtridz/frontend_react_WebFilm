@@ -19,8 +19,8 @@ const options = [
 
 const Footer = () => {
   const getOptions = (option, index) => (
-    <div className='text-white px-8' key={index}>
-      <h2 className='text-xl font-semibold uppercase py-2.5 max-lg:py-1  text-blue-400'>
+    <div className='text-white lg:px-8' key={index}>
+      <h2 className='lg:text-xl font-semibold uppercase py-2.5 max-lg:py-1  text-blue-400'>
         {option.title}
       </h2>
       <div className='flex flex-col'>

@@ -14,9 +14,12 @@ const Header = () => {
   const token = Cookies.get("logged" || "uid")
   useEffect(() => {}, [Cookies])
   return (
-    <div className=' header lg:px-20 max-lg:px-4 flex  max-lg:justify-between w-full lg:justify-center'>
+    <div className='max-lg:px-2  header lg:px-20  flex  max-lg:justify-between w-full lg:justify-center'>
       <div className='lg:w-[1200px] flex justify-between max-lg:w-full'>
-        <Link to='/' className='flex outline-none items-center  pb-3 text-base px-4 text-white '>
+        <Link
+          to='/'
+          className='flex outline-none items-center  pb-3 text-base lg:px-4 max-lg:px-1 text-white '
+        >
           <p className='text-5xl'>{IconWeb}</p>
         </Link>
         <div className='max-lg:w-full  max-lg:hidden  flex items-center'>

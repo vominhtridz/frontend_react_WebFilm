@@ -32,7 +32,7 @@ const PathNavigate = ({ handleClick, path }) => {
         }}
       >
         <p className='pr-2.5 text-2xl text-green-400'>{option.icon}</p>
-        <p className='font-medium text-sm text-gray-400'>{option.title}</p>
+        <p className='font-medium text-sm max-lg:hidden text-gray-400'>{option.title}</p>
       </button>
     ))
 

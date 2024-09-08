@@ -12,7 +12,7 @@ const Search = () => {
     setValue("")
   }
   return (
-    <form className='md:mx-8  w-full flex items-center ' onSubmit={handleSearch}>
+    <form className='lg:mx-8  w-full flex items-center ' onSubmit={handleSearch}>
       <div className='relative w-full overflow-hidden'>
         <SearchIcon />
         <input
@@ -27,7 +27,7 @@ const Search = () => {
       <button
         type='submit'
         onClick={handleSearch}
-        className='whitespace-nowrap px-4 py-1.5 ml-2 text-sm text-gray-900 border border-gray-300 rounded-md bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-600 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500'
+        className='whitespace-nowrap max-lg:px-2 max-lg:text-[12px] lg:px-4 py-1.5 text-sm text-gray-900 border border-gray-300 rounded-md ml-1 bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-600 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500'
       >
         Tìm kiếm
       </button>

@@ -8,7 +8,7 @@ const AllInforFilm = ({ listFilms }) => {
     ? parseInt(listFilms.movie.episode_total)
     : parseInt(listFilms.movie.episode_current.slice(4, 10))
   return (
-    <div className='bg-slate-800 p-4 flex shadow'>
+    <div className='bg-slate-800 p-4 flex max-lg:flex-col shadow'>
       <div className='mr-4'>
         <div className='flex  text-sm text-slate-300 py-1'>
           <div className='px-2 font-medium  text-white flex items-center '>
@@ -35,9 +35,9 @@ const AllInforFilm = ({ listFilms }) => {
             )}
           </div>
         </div>
-        <div className='flex items-center text-sm text-slate-300 py-1'>
-          <div className='px-2 font-medium  text-white flex items-center '>
-            <div className=' px-1.5 text-[12px] text-yellow-400'>{PlayIcon}</div> Tên Phim :
+        <div className='flex items-center  text-sm text-slate-300 py-1'>
+          <div className='px-2 font-medium max-lg:whitespace-nowrap  text-white flex items-center '>
+            <div className=' px-1.5 text-[12px]  text-yellow-400'>{PlayIcon}</div> Tên Phim :
           </div>
           {listFilms.movie.name}
         </div>

@@ -58,7 +58,7 @@ const AccountLoged = () => {
   }
   return (
     <div
-      className='relative'
+      className='relative flex-col max-lg:mt-4 max-lg:flex max-lg:justify-center'
       onMouseEnter={() => {
         setIsOption(true)
         setIsOpen(true)
@@ -78,7 +78,7 @@ const AccountLoged = () => {
           type='button'
           data-dropdown-toggle='userDropdown'
           data-dropdown-placement='bottom-start'
-          className='w-14 h-10 rounded-full object-cover  cursor-pointer'
+          className='w-14 lg:h-10 max-lg:mx-auto rounded-full object-cover  cursor-pointer'
           src={img}
           alt='User dropdown'
         />
@@ -90,7 +90,7 @@ const AccountLoged = () => {
       {isOption && (
         <div
           id='userDropdown'
-          className='z-10 py-2 absolute right-[-14px] overflow-hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600'
+          className='z-10 py-2 max-lg:w-full max-lg:bg-white lg:absolute right-[-14px] overflow-hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600'
         >
           <ul className=' text-sm  text-gray-700 dark:text-gray-200' aria-labelledby='avatarButton'>
             <Link

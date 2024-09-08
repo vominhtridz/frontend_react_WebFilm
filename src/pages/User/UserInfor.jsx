@@ -111,7 +111,7 @@ const UserInfor = () => {
           <h2 className='text-4xl font-medium  text-white mx-auto flex justify-center'>
             Thông tin tài khoản
           </h2>
-          <div className='flex pt-10 w-full'>
+          <div className='flex max-lg:flex-col pt-10 w-full'>
             <div className='font-medium text-white text-lg pr-10'>
               <img src={img} alt='' className='object-cover max-w-60 max-h-36 rounded-sm' />
               <p className='mx-auto flex justify-center py-2'>{username || "User"}</p>

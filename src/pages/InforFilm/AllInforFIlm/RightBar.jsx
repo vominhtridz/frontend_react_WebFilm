@@ -3,7 +3,7 @@ import { PlayIcon } from "../../../images/icons"
 
 const RightBar = ({ listFilms }) => {
   return (
-    <div className='mx-4'>
+    <div className='lg:mx-4'>
       <div className='flex items-center text-sm text-slate-300 py-1'>
         <div className='px-2 font-medium  text-white flex items-center '>
           <div className='px-1.5 text-[12px] text-yellow-400'>{PlayIcon}</div> Số tập :

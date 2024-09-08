@@ -27,7 +27,7 @@ const ListFilm = () => {
     listFilms.items.map((option, index) => (
       <Link
         to={`/phim/${option.slug}`}
-        className='p-1  w-1/5 max-lg:w-1/5 max-md:w-1/4 max-sm:w-1/3 flex flex-col '
+        className='p-1  w-1/5 max-lg:w-1/5 max-md:w-1/4 max-sm:w-1/2 flex flex-col '
         key={index}
         onMouseEnter={() => handleMouseEnter(index)}
         onMouseLeave={handleMouseLeave}

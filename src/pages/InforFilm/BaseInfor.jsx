@@ -13,14 +13,17 @@ const BaseInfor = ({ listFilms }) => {
   return (
     <>
       (
-      <div className='w-full max-h-[22rem] min-h-[22rem] rounded-md overflow-hidden relative'>
+      <div className='w-full  lg:max-h-[22rem] max-lg:min-h-[30rem]  lg:min-h-[22rem] rounded-md overflow-hidden relative'>
         <img
           src={listFilms.movie.thumb_url ? listFilms.movie.thumb_url : listFilms.movie.link_m3u8}
           className='absolute  top-0 left-0 right-0 opacity-40 bottom-0 z-0 w-full object-cover h-full select-none'
           alt=''
         />
 
-        <div className='absolute flex  top-1/2 -translate-y-1/2 left-6 h-[15.5rem]'>
+        <div className='lg:absolute   max-lg:p-2 flex max-lg:flex-col max-lg:w-full max-lg:items-center    lg:top-1/2 lg:-translate-y-1/2 left-6 lg:h-[15.5rem]'>
+          <h2 className='text-ellipsis z-30 p-4 text-yellow-300  lg:hidden max-lg:leading-6 max-lg:text-xl  lg:text-xl font-medium lg:whitespace-nowrap w-full'>
+            {listFilms.movie.name}
+          </h2>
           {pathSplit[3] == undefined ? (
             <Link
               to={`/phim/${listFilms.movie.slug}/${variEpisode}`}
@@ -48,14 +51,14 @@ const BaseInfor = ({ listFilms }) => {
             />
           )}
           <div className='lg:w-[40rem] max-lg:w-full lg:mx-6 max-lg:ml-2'>
-            <h2 className='text-ellipsis text-xl font-medium whitespace-nowrap w-full text-yellow-300 '>
+            <h2 className='text-ellipsis max-lg:hidden  max-lg:text-base  lg:text-xl font-medium lg:whitespace-nowrap w-full text-yellow-300 '>
               {listFilms.movie.name}
             </h2>
 
-            <div className='py-1 text-slate-50 leading-4 max-lg:font-sans max-lg:text-[11px] font-medium text-sm  border-b border-gray-600'>
+            <div className='py-1 max-lg:w-full max-lg:text-white lg:text-slate-50 leading-4 max-lg:font-sans max-lg:text-[11px] font-medium text-sm  border-b border-gray-600'>
               {listFilms.movie.content}
             </div>
-            <div className='my-2 flex items-center justify-between'>
+            <div className='my-2 flex max-lg:flex-col  lg:items-center justify-between'>
               <div className=''>
                 <div className='flex items-center'>
                   <div className='text-lg text-yellow-400 hover:text-yellow-500'>{StarIcon}</div>

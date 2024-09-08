@@ -67,7 +67,7 @@ const MyVideoPlayer = ({ Episodes, CurrEpisode, loading }) => {
   const handleEnLarge = () => setEnlarge(true)
   const ExitEnlarge = () => setEnlarge(false)
   return (
-    <div className=''>
+    <div className='p-0.5'>
       <div
         className={`${Enlarge ? "transition-all an fixed ease-in-out duration-800 left-0 right-0 top-0 bottom-0 z-50 bg-[grba(0,0,0,1)]" : ""}`}
         style={darkColor}
@@ -75,8 +75,7 @@ const MyVideoPlayer = ({ Episodes, CurrEpisode, loading }) => {
         <iframe
           src={CurrEpisode.link_embed}
           width='100%'
-          height='450'
-          className={`${Enlarge ? "absolute border border-gray-900 shadow left-20 top-10 max-lg:w-[80%] h-[35rem]" : ""}`}
+          className={`lg:h-[450px] max-lg:h-[225px]  ${Enlarge ? "absolute border border-gray-900 shadow max-lg:left-4 max-lg:w-[90%] lg:left-20 top-10  lg:h-[35rem]" : ""}`}
           frameBorder='0'
           allowFullScreen
           title='Video Player'
@@ -84,7 +83,7 @@ const MyVideoPlayer = ({ Episodes, CurrEpisode, loading }) => {
         {Enlarge && (
           <button
             onClick={ExitEnlarge}
-            className='absolute top-72 text-2xl rounded-full p-2  right-32 hover:text-3xl bg-green-50 text-gray-500'
+            className='absolute top-72 max-lg:right-44 text-2xl rounded-full p-2  right-32 hover:text-3xl bg-green-50 text-gray-500'
           >
             {ExitIcon}
           </button>
