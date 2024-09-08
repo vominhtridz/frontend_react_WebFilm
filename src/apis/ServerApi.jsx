@@ -1,4 +1,4 @@
-const apiServer = "http://localhost:1000"
+const apiServer = "https://nodejs-backend-webfilm.onrender.com"
 import axios from "axios"
 export const AxiosPrivate = axios.create({
   baseURL: apiServer,
