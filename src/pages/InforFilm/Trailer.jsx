@@ -12,8 +12,8 @@ const Trailer = ({ listFilms }) => {
         <iframe
           className='w-full h-full'
           src={videoURL}
-          frameborder='0'
-          allowfullscreen=''
+          frameBorder='0'
+          allowFullScreen=''
         ></iframe>
       )}
     </div>

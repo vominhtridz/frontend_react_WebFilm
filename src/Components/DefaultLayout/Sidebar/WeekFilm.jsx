@@ -25,9 +25,9 @@ const WeekFilm = () => {
 
   const getList = () =>
     listFilms.map((option, index) => (
-      <Link
+      <a
         className='flex text-white  relative w-full p-1 my-2 h-[6rem] rounded-sm shadow'
-        to={`/phim/${option.slug}`}
+        href={`/phim/${option.slug}`}
         onMouseEnter={() => handleMouseEnter(index)}
         onMouseLeave={handleMouseLeave}
         key={index}
@@ -56,16 +56,16 @@ const WeekFilm = () => {
         <div className='absolute top-12 right-4 bg-red-500 text-sm mr-2 text-white px-3.5 py-0.5 rounded-full flex items-center'>
           {option.quality}
         </div>
-      </Link>
+      </a>
     ))
   return (
     <>
       <h2 className='text-xl text-yellow-400 uppercase font-semibold'> Phim Lẻ Hay</h2>
       <div className='block my-2 bg-gray-900'>
         {listFilms.length > 8 && (
-          <Link
+          <a
             className='flex text-white  relative w-full p-2  h-[10rem] rounded-sm shadow'
-            to={`/phim/${listFilms[9].slug}`}
+            href={`/phim/${listFilms[9].slug}`}
             onMouseEnter={() => setTopImage(true)}
             onMouseLeave={() => setTopImage(false)}
           >
@@ -93,7 +93,7 @@ const WeekFilm = () => {
             <div className='absolute top-12 right-4 bg-red-500 text-sm mr-2 text-white px-3.5 py-0.5 rounded-full flex items-center'>
               {listFilms[9].quality}
             </div>
-          </Link>
+          </a>
         )}
         {getList()}
       </div>

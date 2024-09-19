@@ -2,11 +2,12 @@ import React from "react"
 import { PlayIcon } from "../../../images/icons"
 import { Link, useLocation } from "react-router-dom"
 import RightBar from "./RightBar"
-const AllInforFilm = ({ listFilms }) => {
+const AllInforFilm = ({ listFilms, ChangePath }) => {
   const path = useLocation().pathname
   const ListEsopide = !parseInt(listFilms.movie.episode_current.slice(4, 10))
     ? parseInt(listFilms.movie.episode_total)
     : parseInt(listFilms.movie.episode_current.slice(4, 10))
+  const NavigateTrailerPage = () => ChangePath("Trailer")
   return (
     <div className='bg-slate-800 p-4 flex max-lg:flex-col shadow'>
       <div className='mr-4'>
@@ -15,7 +16,14 @@ const AllInforFilm = ({ listFilms }) => {
             <div className=' px-1.5 text-[12px] text-yellow-400'>{PlayIcon}</div> Tập phim:
           </div>
           <div className='mt-2.5'>
-            {listFilms.movie.episode_total > 1 ? (
+            {listFilms.movie.episode_current == "Trailer" ? (
+              <button
+                className='block text-white bg-gradient-to-r from-gray-500 via-gray-600 to-gray-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-gray-300 dark:focus:ring-gray-800  rounded-md text-sm px-4 font-sans py-[5px] text-center me-2 mb-2'
+                onClick={NavigateTrailerPage}
+              >
+                Xem Trailer
+              </button>
+            ) : listFilms.movie.episode_total > 1 ? (
               Array.from({ length: 3 }, (_, index) => (
                 <Link
                   key={index}

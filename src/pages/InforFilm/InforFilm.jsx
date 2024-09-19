@@ -26,6 +26,7 @@ const InforFilm = () => {
     }
     fetchFilms()
   }, [path])
+  console.log(listFilms)
   return (
     <>
       {listFilms && (
@@ -43,7 +44,9 @@ const InforFilm = () => {
             <div className='lg:mr-8 max-lg:p-2 w-full lg:mb-20'>
               <BaseInfor listFilms={listFilms} />
               <PathNavigate handleClick={ChangePath} path={TabRoute} />
-              {TabRoute === "Thông tin phim" ? <AllInforFilm listFilms={listFilms} /> : null}
+              {TabRoute === "Thông tin phim" ? (
+                <AllInforFilm listFilms={listFilms} ChangePath={ChangePath} />
+              ) : null}
               {TabRoute === "Nhân Vật" ? <Figure listFilms={listFilms.movie} /> : null}
               {TabRoute === "Trailer" ? <Trailer listFilms={listFilms.movie} /> : null}
               {TabRoute === "Hình Ảnh" ? <Image listFilms={listFilms} /> : null}

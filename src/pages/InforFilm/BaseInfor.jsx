@@ -24,7 +24,7 @@ const BaseInfor = ({ listFilms }) => {
           <h2 className='text-ellipsis z-30 p-4 text-yellow-300  lg:hidden max-lg:leading-6 max-lg:text-xl  lg:text-xl font-medium lg:whitespace-nowrap w-full'>
             {listFilms.movie.name}
           </h2>
-          {pathSplit[3] == undefined ? (
+          {pathSplit[3] == undefined && listFilms.movie.episode_current != "Trailer" ? (
             <Link
               to={`/phim/${listFilms.movie.slug}/${variEpisode}`}
               className='relative hover:opacity-80 max-lg:py-2 rounded-sm overflow-hidden'

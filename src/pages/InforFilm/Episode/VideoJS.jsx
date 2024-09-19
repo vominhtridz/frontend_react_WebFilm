@@ -77,7 +77,7 @@ const MyVideoPlayer = ({ Episodes, CurrEpisode, loading }) => {
           width='100%'
           className={`lg:h-[450px] max-lg:h-[225px]  ${Enlarge ? "absolute border  border-gray-900 shadow lg:w-[80%] max-lg:left-4 max-lg:w-[90%] lg:left-24 top-10  lg:h-[550px]" : ""}`}
           frameBorder='0'
-          allowFullScreen
+          allowFullScreen=''
           title='Video Player'
         ></iframe>
         {Enlarge && (
